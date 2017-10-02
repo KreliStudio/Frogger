@@ -299,7 +299,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4384925436885980}
-  - component: {fileID: 114651323854968710}
   m_Layer: 0
   m_Name: Water_v2
   m_TagString: Untagged
@@ -1219,20 +1218,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   segmentParent: {fileID: 0}
---- !u!114 &114651323854968710
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1960817720002270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0572e6891b15434fac2a612707cab00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startPivot: {fileID: 4557059446842018}
-  endPivot: {fileID: 4900079260571072}
-  logs:
-  - {fileID: 4577538545862048, guid: 816af910b7896f34eb2f5725d8c1dec7, type: 2}
-  - {fileID: 4064225556638084, guid: a76dfd0f512f2114dbe17870dbc09569, type: 2}
-  - {fileID: 4017512788907214, guid: a46035b6d5527da4e8f8bc38d4802b5b, type: 2}

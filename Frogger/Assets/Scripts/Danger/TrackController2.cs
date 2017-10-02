@@ -12,19 +12,15 @@ public class TrackController2 : SegmentController
 
     public override void Init()
     {
-        instancePrefabsList = new Transform[2];
         // create train 
         int id = Random.Range(0, prefabs.Length);
-        instancePrefabsList[0] = Instantiate(prefabs[id], startPivot.position, Quaternion.identity) as Transform;
+        instancePrefabsList.Add(Instantiate(prefabs[id], startPivot.position, Quaternion.identity) as Transform);
         instancePrefabsList[0].SetParent(transform);
-
         // create rail light
-        instancePrefabsList[1] =Instantiate(railLight, transform.position + new Vector3(0.0f, 0.5f, 0.0f), Quaternion.identity) as Transform;
+        instancePrefabsList.Add(Instantiate(railLight, transform.position + new Vector3(0.0f, 0.5f, 0.0f), Quaternion.identity) as Transform);
         instancePrefabsList[1].SetParent(transform);
-
         // init Train
         instancePrefabsList[0].gameObject.AddComponent<Train>().Init(instancePrefabsList[1].GetComponent<RailLight>());
-
     }
 
 

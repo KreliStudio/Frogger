@@ -534,7 +534,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4183723072630978}
-  - component: {fileID: 114159032063923278}
   m_Layer: 0
   m_Name: Tracks_v2
   m_TagString: Untagged
@@ -3756,20 +3755,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   segmentParent: {fileID: 0}
---- !u!114 &114159032063923278
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1584100646626882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86665d0d97b308445a56841a313bc091, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startPivot: {fileID: 4635174752324240}
-  endPivot: {fileID: 4830616265519792}
-  trains:
-  - {fileID: 4829239485957940, guid: 6637ee13435d2e04d82e27b4becdfcfd, type: 2}
-  - {fileID: 4281622373266868, guid: 32bb74d3d1245ce4fa7c9b0b3c0f7a1f, type: 2}
-  railLight: {fileID: 4087376667600198, guid: afa86341f7012a1419ba0be79907ddd2, type: 2}

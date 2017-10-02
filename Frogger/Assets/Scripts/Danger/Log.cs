@@ -12,12 +12,20 @@ public class Log : MonoBehaviour {
 
     public void Init(float sp, float x, Vector3 sPos, Vector3 ePos)
     {
-        speed = sp;
         startPos = sPos;
         endPos = ePos;
-        lerpTime = x/Vector3.Distance(startPos,endPos);
+        speed = sp;
+        lerpTime = x / Vector3.Distance(startPos, endPos);
         transform.rotation = transform.parent.rotation;
     }
+
+    public void Spawn(int posZ)
+    {
+        startPos = new Vector3(startPos.x, startPos.y, posZ);
+        endPos = new Vector3(endPos.x, endPos.y, posZ);
+    }
+
+
 
     public void Update()
     {

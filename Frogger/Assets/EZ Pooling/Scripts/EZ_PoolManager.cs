@@ -175,7 +175,6 @@ namespace EZ_Pooling
                 var newTransform = GameObject.Instantiate(transToSpawn, Vector3.zero, transToSpawn.rotation) as Transform;
                 newTransform.name = transToSpawn.name;
                 newTransform.parent = parentTransform;
-
                 return newTransform;
             }
 
@@ -192,7 +191,7 @@ namespace EZ_Pooling
                     return null;
                 }
             }
-
+            
             return Pools[name].Spawn(transToSpawn, position, rotation);
         }
 

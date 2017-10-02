@@ -7,7 +7,7 @@ public abstract class SegmentController : MonoBehaviour {
     public Transform startPivot;
     public Transform endPivot;
     public Transform[] prefabs;
-    public Transform[] instancePrefabsList;
+    public List<Transform> instancePrefabsList;
     
     protected float speed;
 
@@ -19,8 +19,7 @@ public abstract class SegmentController : MonoBehaviour {
     {
         Init();
     }
-
-
+    
 
 
 
