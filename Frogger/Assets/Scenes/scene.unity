@@ -272,34 +272,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 56.289, y: -68.28001, z: 8.950001}
---- !u!1 &235655514
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 235655515}
-  m_Layer: 0
-  m_Name: World
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &235655515
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 235655514}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &242242066
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,7 +448,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &763087469
 GameObject:
@@ -635,7 +607,7 @@ RectTransform:
   m_Children:
   - {fileID: 242242067}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -982,20 +954,20 @@ MonoBehaviour:
   safezoneSegments:
   - probability: 1
     intensity: 0.35
-    prefab: {fileID: 1759453085803468, guid: 8f56c574e00ecf4478e43b6264104d30, type: 2}
+    prefab: {fileID: 4295921200926308, guid: 8f56c574e00ecf4478e43b6264104d30, type: 2}
   - probability: 0.2
     intensity: 0.6
-    prefab: {fileID: 1440631450557018, guid: 85414329090995c49a69bab76788c2aa, type: 2}
+    prefab: {fileID: 4864946186532736, guid: 85414329090995c49a69bab76788c2aa, type: 2}
   dangerSegments:
+  - probability: 0
+    intensity: 1
+    prefab: {fileID: 4025749503442660, guid: c1bafb7836c743c4497be6f2b7f4c7ad, type: 2}
   - probability: 1
     intensity: 1
-    prefab: {fileID: 1607719436282600, guid: c1bafb7836c743c4497be6f2b7f4c7ad, type: 2}
-  - probability: 1
+    prefab: {fileID: 4183723072630978, guid: 6af1ad5220951b845bc67b1383ae2ae6, type: 2}
+  - probability: 0
     intensity: 1
-    prefab: {fileID: 1960817720002270, guid: 89638146e0483444fbe2b33e39a76c9a, type: 2}
-  - probability: 1
-    intensity: 1
-    prefab: {fileID: 1584100646626882, guid: c129890760afae246a8113616f5a881d, type: 2}
+    prefab: {fileID: 4384925436885980, guid: 89638146e0483444fbe2b33e39a76c9a, type: 2}
   safezoneStructuresProbability: 0
   safezoneStructures:
   - probability: 1
@@ -1014,7 +986,7 @@ MonoBehaviour:
     prefab: {fileID: 1452139194517462, guid: 656fbfd2c0cb5ab46ad4c62971ff0852, type: 2}
   dificulty: 0.1
   player: {fileID: 18706235}
-  worldParent: {fileID: 235655515}
+  worldParent: {fileID: 0}
 --- !u!1 &1732725958
 GameObject:
   m_ObjectHideFlags: 0
@@ -1126,7 +1098,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 12217c5334ed4ec4e93bcaef8b1b756d, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 13200000, guid: 12217c5334ed4ec4e93bcaef8b1b756d, type: 2}
       propertyPath: m_Alignment
@@ -1156,6 +1128,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2031803034}
   - component: {fileID: 2031803033}
+  - component: {fileID: 2031803035}
   m_Layer: 0
   m_Name: _Scripts
   m_TagString: Untagged
@@ -1185,9 +1158,90 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2031803032}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 240.00064, y: 788.2, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2031803035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2031803032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1701af0df6c96fa45bfa3662b319541b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabPoolOptions:
+  - prefabTransform: {fileID: 4295921200926308, guid: 8f56c574e00ecf4478e43b6264104d30,
+      type: 2}
+    instancesToPreload: 20
+    isPoolExpanded: 0
+    showDebugLog: 0
+    poolCanGrow: 1
+    cullDespawned: 1
+    cullAbove: 20
+    cullDelay: 2
+    cullAmount: 2
+    enableHardLimit: 0
+    hardLimit: 10
+    recycle: 0
+  - prefabTransform: {fileID: 4864946186532736, guid: 85414329090995c49a69bab76788c2aa,
+      type: 2}
+    instancesToPreload: 20
+    isPoolExpanded: 0
+    showDebugLog: 0
+    poolCanGrow: 1
+    cullDespawned: 1
+    cullAbove: 20
+    cullDelay: 2
+    cullAmount: 2
+    enableHardLimit: 0
+    hardLimit: 10
+    recycle: 0
+  - prefabTransform: {fileID: 4025749503442660, guid: c1bafb7836c743c4497be6f2b7f4c7ad,
+      type: 2}
+    instancesToPreload: 10
+    isPoolExpanded: 0
+    showDebugLog: 0
+    poolCanGrow: 1
+    cullDespawned: 1
+    cullAbove: 10
+    cullDelay: 2
+    cullAmount: 2
+    enableHardLimit: 0
+    hardLimit: 10
+    recycle: 0
+  - prefabTransform: {fileID: 4183723072630978, guid: 6af1ad5220951b845bc67b1383ae2ae6,
+      type: 2}
+    instancesToPreload: 10
+    isPoolExpanded: 0
+    showDebugLog: 0
+    poolCanGrow: 1
+    cullDespawned: 1
+    cullAbove: 10
+    cullDelay: 2
+    cullAmount: 2
+    enableHardLimit: 0
+    hardLimit: 10
+    recycle: 0
+  - prefabTransform: {fileID: 4384925436885980, guid: 89638146e0483444fbe2b33e39a76c9a,
+      type: 2}
+    instancesToPreload: 10
+    isPoolExpanded: 0
+    showDebugLog: 0
+    poolCanGrow: 1
+    cullDespawned: 1
+    cullAbove: 10
+    cullDelay: 2
+    cullAmount: 2
+    enableHardLimit: 0
+    hardLimit: 10
+    recycle: 0
+  showDebugLog: 0
+  isRootExpanded: 1
+  autoAddMissingPrefabPool: 1
+  usePoolManager: 1

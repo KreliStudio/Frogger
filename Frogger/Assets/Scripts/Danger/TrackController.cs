@@ -6,11 +6,16 @@ public class TrackController : MonoBehaviour {
 
     public Transform startPivot;
     public Transform endPivot;
-    public GameObject[] trains;
-    public GameObject railLight;
+    public Transform[] trains;
+    public Transform railLight;
 
     private float timeToArrive;
-    private GameObject train;
+    private Transform train;
+
+
+    void Awake()
+    {
+    }
 
 
     public void Init(float dificulty)
@@ -19,12 +24,14 @@ public class TrackController : MonoBehaviour {
         timeToArrive = Random.Range(0, 1 / dificulty) + 3;
         // create train 
         int id = Random.Range(0, trains.Length);
-        train = Instantiate(trains[id], startPivot.position, Quaternion.identity) as GameObject;
-        train.transform.SetParent(transform);
-        train.AddComponent<Train>().Init(timeToArrive, startPivot.position, endPivot.position);
+        //train = Instantiate(trains[id], startPivot.position, Quaternion.identity) as GameObject;
+        train = EZ_Pooling.EZ_PoolManager.Spawn(trains[id], startPivot.position, Quaternion.identity);
+        train.SetParent(transform);
+        //train.gameObject.AddComponent<Train>().Init(timeToArrive, startPivot.position, endPivot.position);
         // create rail light
-        railLight = Instantiate(railLight, transform.position + new Vector3(1.0f, 0.5f, -0.5f), Quaternion.identity) as GameObject;
-        railLight.transform.SetParent(transform);
+        //railLight = Instantiate(railLight, transform.position + new Vector3(1.0f, 0.5f, -0.5f), Quaternion.identity) as GameObject;
+        railLight = EZ_Pooling.EZ_PoolManager.Spawn(railLight, transform.position + new Vector3(1.0f, 0.5f, -0.5f), Quaternion.identity);
+        railLight.SetParent(transform);
     }
 
 

@@ -6,7 +6,7 @@ public class WaterController : MonoBehaviour {
 
     public Transform startPivot;
     public Transform endPivot;
-    public GameObject[] logs;
+    public Transform[] logs;
 
     private float maxSpeed;
     private float speed;
@@ -39,11 +39,12 @@ public class WaterController : MonoBehaviour {
     private void CreateWood(float x, int width)
     {
         // create object 
-        GameObject obj = Instantiate(logs[width], startPivot.position, Quaternion.identity) as GameObject;
+        //GameObject obj = Instantiate(logs[width], startPivot.position, Quaternion.identity) as GameObject;
+        Transform trans = EZ_Pooling.EZ_PoolManager.Spawn(logs[width], startPivot.position, Quaternion.identity);
         // set parent
-        obj.transform.SetParent(transform);
+        //obj.transform.SetParent(transform);
         // initialization script
-        obj.AddComponent<Log>().Init(speed, x, startPivot.position, endPivot.position);
+        trans.gameObject.AddComponent<Log>().Init(speed, x, startPivot.position, endPivot.position);
 
     }
     

@@ -9,8 +9,10 @@ public class WorldGenerator : MonoBehaviour
 
     public List<Segment> safezoneSegments;   // Forest, park, grass etc.
     public List<Segment> dangerSegments;   // Roads, trains etc.
+    [Range(0.0f, 1.0f)]
     public float safezoneStructuresProbability; // Probability of generate structure, 0- nothing, 1- only structure
     public List<Structure> safezoneStructures;   // Forest, park, grass etc.
+    [Range(0.0f, 1.0f)]
     public float dangerStructuresProbability;   // Probability of generate structure, 0- nothing, 1- only structure
     public List<Structure> dangerStructures;   // Roads, trains etc.
 
@@ -48,7 +50,7 @@ public class WorldGenerator : MonoBehaviour
         allSegmentsInWorld = -startSafezonePosition;
         for (int i = 0; i <= startSafezonePosition; i++)
         {
-            safezoneSegments[safezoneId].Create(allSegmentsInWorld++, dificulty).transform.SetParent(worldParent);
+            safezoneSegments[safezoneId].Create(allSegmentsInWorld++, dificulty);
         }
     }
 
@@ -59,7 +61,7 @@ public class WorldGenerator : MonoBehaviour
             // make danger structure
             // random id segment
             int id = RandomId(dangerStructures);
-            dangerStructures[id].Create(allSegmentsInWorld).transform.SetParent(worldParent);
+            dangerStructures[id].Create(allSegmentsInWorld);
             allSegmentsInWorld += dangerStructures[id].length;
         }
         else {
@@ -72,7 +74,7 @@ public class WorldGenerator : MonoBehaviour
             // make safezone structure
             // random id segment
             int id = RandomId(safezoneStructures);
-            safezoneStructures[id].Create(allSegmentsInWorld).transform.SetParent(worldParent);
+            safezoneStructures[id].Create(allSegmentsInWorld);
             allSegmentsInWorld += safezoneStructures[id].length;
         }
         else {
@@ -107,7 +109,7 @@ public class WorldGenerator : MonoBehaviour
             // create danger segments
             for (int i = 0; i < segmentLength; i++)
             {
-                dangerSegments[id].Create(allSegmentsInWorld++, dificulty).transform.SetParent(worldParent);
+                dangerSegments[id].Create(allSegmentsInWorld++, dificulty);
             }
             //Debug.Log("Wstaw " + dangerSegments[id].prefab.name + ", o długości:  [" + segmentLength +" / " + segmentsIsGroup + "]");
         }
@@ -123,7 +125,7 @@ public class WorldGenerator : MonoBehaviour
         // create safezones
         for (int i = 0; i < safezonelength; i++)
         {
-            safezoneSegments[id].Create(allSegmentsInWorld++, dificulty).transform.SetParent(worldParent);
+            safezoneSegments[id].Create(allSegmentsInWorld++, dificulty);
         }
     }
 

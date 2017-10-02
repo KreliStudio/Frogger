@@ -33,4 +33,9 @@ public class RailLight : MonoBehaviour {
 
     }
 
+    public void Despawn()
+    {
+
+    }
+
 }

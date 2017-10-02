@@ -59,6 +59,8 @@ namespace Player
                 else
                 if (vertical > 0)
                 {
+                    //meters counter
+                    GameManager.instance.meters = (int)transform.position.z;
                     //Debug.Log("[PlayerMovement] Move Forward.");
                     Behaviours.instance.CheckPosition(Direction.Forward);
                 }
@@ -89,12 +91,12 @@ namespace Player
                             float swipeValue = Mathf.Sign(touch.position.y - startPos.y);
                             if (swipeValue > 0)
                             {  //up swipe
-                                Debug.Log("[SWIPE] Move Up. ");
+                                //Debug.Log("[SWIPE] Move Up. ");
                                 Move(0, 1);
                             }
                             else if (swipeValue < 0)
                             {//down swipe
-                                Debug.Log("[SWIPE] Move Down. ");
+                                //Debug.Log("[SWIPE] Move Down. ");
                                 Move(0, -1);
                             }
                         }
@@ -104,17 +106,21 @@ namespace Player
                             float swipeValue = Mathf.Sign(touch.position.x - startPos.x);
                             if (swipeValue > 0)
                             {//right swipe
-                                Debug.Log("[SWIPE] Move Right. ");
+                                //Debug.Log("[SWIPE] Move Right. ");
                                 Move(1, 0);
                             }
                             else if (swipeValue < 0)
                             {//left swipe
-                                Debug.Log("[SWIPE] Move Left. ");
+                                //Debug.Log("[SWIPE] Move Left. ");
                                 Move(-1, 0);
                             }
                         }
-                        Debug.Log("[SWIPE] swipeDistVertical: " + swipeDistVertical + ", swipeDistHorizontal: " + swipeDistHorizontal);
+                        //Debug.Log("[SWIPE] swipeDistVertical: " + swipeDistVertical + ", swipeDistHorizontal: " + swipeDistHorizontal);
                         break;
+                }
+                if (Input.GetTouch(0).phase == TouchPhase.Ended) // one tap
+                {
+                    Move(0, 1);
                 }
             }
         }

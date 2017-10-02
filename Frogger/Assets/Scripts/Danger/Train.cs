@@ -9,10 +9,16 @@ public class Train : MonoBehaviour {
     private float lerpTime;
     private Vector3 startPos;
     private Vector3 endPos;
+    private RailLight railLight;
 
     // when player jump on vehicle
     public GameObject stickedPlayer;
-    public void Init(float tToArr, Vector3 sPos, Vector3 ePos)
+    public void Init(RailLight rLight)
+    {
+        railLight = rLight;
+    }
+
+    public void Spawn(float tToArr, Vector3 sPos, Vector3 ePos)
     {
         timeToArrive = tToArr;
         startPos = sPos;
@@ -21,8 +27,15 @@ public class Train : MonoBehaviour {
         transform.rotation = transform.parent.rotation;
         Invoke("ArriveTrain", timeToArrive);
         // 2sec before arrive tru on alert (pulse light)
-        Invoke("Alert", timeToArrive-2.0f);
+        Invoke("Alert", timeToArrive - 2.0f);
     }
+
+    public void Despawn()
+    {
+        CancelInvoke();
+        StopAllCoroutines();
+    }
+
 
     private void ArriveTrain()
     {
@@ -31,7 +44,7 @@ public class Train : MonoBehaviour {
     private void Alert()
     {
         // send alert to rail light
-        transform.parent.GetComponent<TrackController>().railLight.SendMessage("Alert", SendMessageOptions.DontRequireReceiver);
+        railLight.Alert();
     }
 
     public void StickPlayer(GameObject player)

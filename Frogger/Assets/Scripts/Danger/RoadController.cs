@@ -6,12 +6,12 @@ public class RoadController : MonoBehaviour {
 
     public Transform startPivot;
     public Transform endPivot;
-    public GameObject[] cars;
+    public Transform[] cars;
 
     private float carMaxSpeed;
     private float carSpeed;
-    private GameObject car1;
-    private GameObject car2;
+    private Transform car1;
+    private Transform car2;
     private float lerpTime;
 
 
@@ -22,9 +22,10 @@ public class RoadController : MonoBehaviour {
         carSpeed = Random.Range(0.1f, carMaxSpeed);
         // create first car 
         int id = Random.Range(0, cars.Length);
-        car1 = Instantiate(cars[id], startPivot.position, Quaternion.identity) as GameObject;
-        car1.transform.SetParent(transform);
-        car1.AddComponent<Car>().Init(carSpeed, startPivot.position, endPivot.position);
+        //car1 = Instantiate(cars[id], startPivot.position, Quaternion.identity) as GameObject;
+        car1 = EZ_Pooling.EZ_PoolManager.Spawn(cars[id].transform, startPivot.position, Quaternion.identity);
+        //car1.SetParent(transform);
+        car1.gameObject.AddComponent<Car>().Init(carSpeed, startPivot.position, endPivot.position);
         // create second car
         lerpTime = 0;
         StartCoroutine(CreateSecondCar());
@@ -40,9 +41,9 @@ public class RoadController : MonoBehaviour {
             if (lerpTime >= 0.5f)
             {
                 int id = Random.Range(0, cars.Length);
-                car2 = Instantiate(cars[id], startPivot.position, Quaternion.identity) as GameObject;
-                car2.transform.SetParent(transform);
-                car2.AddComponent<Car>().Init(carSpeed, startPivot.position, endPivot.position);
+                car2 = EZ_Pooling.EZ_PoolManager.Spawn(cars[id].transform, startPivot.position, Quaternion.identity);
+                //car2.SetParent(transform);
+                car2.gameObject.AddComponent<Car>().Init(carSpeed, startPivot.position, endPivot.position);
             }else
             {
                 StartCoroutine(CreateSecondCar());

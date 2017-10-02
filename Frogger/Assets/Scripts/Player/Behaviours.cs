@@ -58,8 +58,8 @@ namespace Player
             transform.eulerAngles = DirectionToEulerAngles(dir);
 
             // debug raycasting
-            Debug.DrawRay(transform.position, checkDirection, Color.yellow, 5.0f);
-            Debug.DrawRay(checkOrigin, Vector3.down * 4, Color.green, 5.0f);
+            //Debug.DrawRay(transform.position, checkDirection, Color.yellow, 5.0f);
+            //Debug.DrawRay(checkOrigin, Vector3.down * 4, Color.green, 5.0f);
 
             if (Physics.Raycast(checkOrigin, Vector3.down * 4, out hit))
             {
@@ -191,7 +191,7 @@ namespace Player
 
         public void UnderVehicle()
         {
-            Debug.Log("[Behaviour] Player UnderVehicle.");
+            //Debug.Log("[Behaviour] Player UnderVehicle.");
             StopCoroutine(coroutine);
             transform.position = new Vector3(transform.position.x, -0.5f, transform.position.z);
             transform.localScale = new Vector3(1.0f, 0.1f, 1.0f);
@@ -201,7 +201,7 @@ namespace Player
 
         private void JumpOnVehicle(Transform target, Vector3 dir)
         {
-            Debug.Log("[Behaviour] Player JumpOnVehicle.");
+            //Debug.Log("[Behaviour] Player JumpOnVehicle.");
             // required for player not dead under vehicle
             isJumpOnVehicle = true;
             // scale player
@@ -221,7 +221,7 @@ namespace Player
 
         public void Drown(Transform target)
         {
-            Debug.Log("[Behaviour] Player Drown.");
+            //Debug.Log("[Behaviour] Player Drown.");
             // after this behaviour do end game
             Dead();
         }

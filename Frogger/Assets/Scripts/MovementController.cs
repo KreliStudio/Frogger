@@ -92,7 +92,7 @@ public class MovementController : MonoBehaviour
                     // fit to grid and end animation
                     transform.position = endPos;
                     startPos = endPos;
-                    // Debug.Log("Delta:");
+                     Debug.Log("meters: " +transform.position.z);
                     animator.SetBool("jump", false);
                     // if all axis is not pressed then can move again
                     if (horizontal == 0 && vertical == 0)
