@@ -11,6 +11,9 @@ TagManager:
   - Car
   - Train
   - River
+  - RiverIn
+  - RiverOut
+  - WaterSegment
   layers:
   - Default
   - TransparentFX

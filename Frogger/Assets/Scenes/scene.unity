@@ -849,7 +849,6 @@ GameObject:
   - component: {fileID: 1636788631}
   - component: {fileID: 1636788630}
   - component: {fileID: 1636788635}
-  - component: {fileID: 1636788636}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -940,53 +939,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 18706235}
   offset: {x: 4.5, y: 10, z: -11}
---- !u!114 &1636788636
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1636788629}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a469e921d38de2f45acbf65e83c195b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  safezoneSegments:
-  - probability: 1
-    intensity: 0.35
-    prefab: {fileID: 4295921200926308, guid: 8f56c574e00ecf4478e43b6264104d30, type: 2}
-  - probability: 0.2
-    intensity: 0.6
-    prefab: {fileID: 4864946186532736, guid: 85414329090995c49a69bab76788c2aa, type: 2}
-  dangerSegments:
-  - probability: 0
-    intensity: 1
-    prefab: {fileID: 4025749503442660, guid: c1bafb7836c743c4497be6f2b7f4c7ad, type: 2}
-  - probability: 1
-    intensity: 1
-    prefab: {fileID: 4183723072630978, guid: 6af1ad5220951b845bc67b1383ae2ae6, type: 2}
-  - probability: 0
-    intensity: 1
-    prefab: {fileID: 4384925436885980, guid: 89638146e0483444fbe2b33e39a76c9a, type: 2}
-  safezoneStructuresProbability: 0
-  safezoneStructures:
-  - probability: 1
-    length: 7
-    prefab: {fileID: 1223584973023970, guid: daf8b63361c7f3945aaf42a47a5586a6, type: 2}
-  - probability: 1
-    length: 6
-    prefab: {fileID: 1870804254178108, guid: 2a1799027fcc8b745b304542b11d372b, type: 2}
-  dangerStructuresProbability: 0
-  dangerStructures:
-  - probability: 1
-    length: 12
-    prefab: {fileID: 1706502354272250, guid: a03aa59b41f5dd64590ab1756939c787, type: 2}
-  - probability: 1
-    length: 6
-    prefab: {fileID: 1452139194517462, guid: 656fbfd2c0cb5ab46ad4c62971ff0852, type: 2}
-  dificulty: 0.1
-  player: {fileID: 18706235}
-  worldParent: {fileID: 0}
 --- !u!1 &1732725958
 GameObject:
   m_ObjectHideFlags: 0
@@ -1129,6 +1081,7 @@ GameObject:
   - component: {fileID: 2031803034}
   - component: {fileID: 2031803033}
   - component: {fileID: 2031803035}
+  - component: {fileID: 2031803036}
   m_Layer: 0
   m_Name: _Scripts
   m_TagString: Untagged
@@ -1188,7 +1141,7 @@ MonoBehaviour:
     cullAmount: 2
     enableHardLimit: 0
     hardLimit: 10
-    recycle: 0
+    recycle: 1
   - prefabTransform: {fileID: 4864946186532736, guid: 85414329090995c49a69bab76788c2aa,
       type: 2}
     instancesToPreload: 20
@@ -1202,40 +1155,40 @@ MonoBehaviour:
     enableHardLimit: 0
     hardLimit: 10
     recycle: 0
-  - prefabTransform: {fileID: 4025749503442660, guid: c1bafb7836c743c4497be6f2b7f4c7ad,
-      type: 2}
-    instancesToPreload: 10
-    isPoolExpanded: 0
-    showDebugLog: 0
-    poolCanGrow: 1
-    cullDespawned: 1
-    cullAbove: 10
-    cullDelay: 2
-    cullAmount: 2
-    enableHardLimit: 0
-    hardLimit: 10
-    recycle: 0
   - prefabTransform: {fileID: 4183723072630978, guid: 6af1ad5220951b845bc67b1383ae2ae6,
       type: 2}
-    instancesToPreload: 10
+    instancesToPreload: 15
     isPoolExpanded: 0
     showDebugLog: 0
     poolCanGrow: 1
     cullDespawned: 1
-    cullAbove: 10
+    cullAbove: 15
     cullDelay: 2
     cullAmount: 2
     enableHardLimit: 0
     hardLimit: 10
     recycle: 0
-  - prefabTransform: {fileID: 4384925436885980, guid: 89638146e0483444fbe2b33e39a76c9a,
+  - prefabTransform: {fileID: 4384925436885980, guid: b55a202ab90fd13418a0e13cf349516f,
       type: 2}
-    instancesToPreload: 10
+    instancesToPreload: 15
     isPoolExpanded: 0
     showDebugLog: 0
     poolCanGrow: 1
     cullDespawned: 1
-    cullAbove: 10
+    cullAbove: 15
+    cullDelay: 2
+    cullAmount: 2
+    enableHardLimit: 0
+    hardLimit: 10
+    recycle: 0
+  - prefabTransform: {fileID: 4025749503442660, guid: 1d13209e20d73bd498c2d8a1005d94bf,
+      type: 2}
+    instancesToPreload: 15
+    isPoolExpanded: 0
+    showDebugLog: 0
+    poolCanGrow: 1
+    cullDespawned: 1
+    cullAbove: 15
     cullDelay: 2
     cullAmount: 2
     enableHardLimit: 0
@@ -1243,5 +1196,52 @@ MonoBehaviour:
     recycle: 0
   showDebugLog: 0
   isRootExpanded: 1
-  autoAddMissingPrefabPool: 1
+  autoAddMissingPrefabPool: 0
   usePoolManager: 1
+--- !u!114 &2031803036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2031803032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a469e921d38de2f45acbf65e83c195b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  safezoneSegments:
+  - probability: 1
+    intensity: 0.35
+    prefab: {fileID: 4295921200926308, guid: 8f56c574e00ecf4478e43b6264104d30, type: 2}
+  - probability: 0.2
+    intensity: 0.6
+    prefab: {fileID: 4864946186532736, guid: 85414329090995c49a69bab76788c2aa, type: 2}
+  dangerSegments:
+  - probability: 0
+    intensity: 1
+    prefab: {fileID: 4025749503442660, guid: 1d13209e20d73bd498c2d8a1005d94bf, type: 2}
+  - probability: 0
+    intensity: 0.2
+    prefab: {fileID: 4183723072630978, guid: 6af1ad5220951b845bc67b1383ae2ae6, type: 2}
+  - probability: 1
+    intensity: 2
+    prefab: {fileID: 4384925436885980, guid: b55a202ab90fd13418a0e13cf349516f, type: 2}
+  safezoneStructuresProbability: 0
+  safezoneStructures:
+  - probability: 1
+    length: 7
+    prefab: {fileID: 1223584973023970, guid: daf8b63361c7f3945aaf42a47a5586a6, type: 2}
+  - probability: 1
+    length: 6
+    prefab: {fileID: 1870804254178108, guid: 2a1799027fcc8b745b304542b11d372b, type: 2}
+  dangerStructuresProbability: 0
+  dangerStructures:
+  - probability: 1
+    length: 12
+    prefab: {fileID: 1706502354272250, guid: a03aa59b41f5dd64590ab1756939c787, type: 2}
+  - probability: 1
+    length: 6
+    prefab: {fileID: 1452139194517462, guid: 656fbfd2c0cb5ab46ad4c62971ff0852, type: 2}
+  dificulty: 0.1
+  player: {fileID: 18706235}
+  worldParent: {fileID: 0}

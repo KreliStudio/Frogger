@@ -41,6 +41,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1150274899125942
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4462851179185722}
+  m_Layer: 0
+  m_Name: StreamIn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1204422983875164
 GameObject:
   m_ObjectHideFlags: 1
@@ -71,8 +86,8 @@ GameObject:
   - component: {fileID: 23886317712168078}
   - component: {fileID: 65251030084023324}
   m_Layer: 0
-  m_Name: DarkWater
-  m_TagString: River
+  m_Name: DarkWaterIn
+  m_TagString: RiverIn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -195,7 +210,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4557059446842018}
   m_Layer: 0
-  m_Name: StartPivot
+  m_Name: StreamOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -231,8 +246,23 @@ GameObject:
   - component: {fileID: 23043166171228696}
   - component: {fileID: 65888165374801144}
   m_Layer: 0
-  m_Name: DarkWater
-  m_TagString: River
+  m_Name: DarkWaterOut
+  m_TagString: RiverOut
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1802911346269222
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4303931236391304}
+  m_Layer: 0
+  m_Name: StartPivot
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -302,7 +332,7 @@ GameObject:
   - component: {fileID: 114634333505743322}
   m_Layer: 0
   m_Name: Water_v3
-  m_TagString: Untagged
+  m_TagString: WaterSegment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -346,6 +376,19 @@ Transform:
   m_Father: {fileID: 4764407577338566}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4303931236391304
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1802911346269222}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -15, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4384925436885980}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4318725984812758
 Transform:
   m_ObjectHideFlags: 1
@@ -382,13 +425,28 @@ Transform:
   m_LocalPosition: {x: 0, y: -1, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4557059446842018}
+  - {fileID: 4303931236391304}
   - {fileID: 4900079260571072}
   - {fileID: 4925905691760036}
   - {fileID: 4132672446256918}
   - {fileID: 4764407577338566}
+  - {fileID: 4462851179185722}
+  - {fileID: 4557059446842018}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4462851179185722
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1150274899125942}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4384925436885980}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4532921438756334
 Transform:
@@ -410,11 +468,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1659415569623376}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15, y: 0, z: 0}
+  m_LocalPosition: {x: 5.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4384925436885980}
-  m_RootOrder: 0
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4714694122337506
 Transform:
@@ -1085,8 +1143,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.1, y: 2, z: 1}
-  m_Center: {x: 0.45, y: 1.5, z: 0}
+  m_Size: {x: 0.1, y: 3, z: 1}
+  m_Center: {x: 0.45, y: 1, z: 0}
 --- !u!65 &65293892168316142
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1181,8 +1239,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.1, y: 2, z: 1}
-  m_Center: {x: -0.45, y: 1.5, z: 0}
+  m_Size: {x: 0.1, y: 3, z: 1}
+  m_Center: {x: -0.45, y: 1, z: 0}
 --- !u!65 &65930290753307514
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1230,10 +1288,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19357c579bb7c9b4eb88bf315f88cac0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPivot: {fileID: 4557059446842018}
+  startPivot: {fileID: 4303931236391304}
   endPivot: {fileID: 4900079260571072}
   prefabs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 4577538545862048, guid: 816af910b7896f34eb2f5725d8c1dec7, type: 2}
+  - {fileID: 4064225556638084, guid: a76dfd0f512f2114dbe17870dbc09569, type: 2}
   instancePrefabsList: []
+  streamIn: {fileID: 4462851179185722}
+  streamOut: {fileID: 4557059446842018}

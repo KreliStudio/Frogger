@@ -10,7 +10,7 @@ public class Segment {
     [Range(0.0f, 10.0f)]
     public float intensity; // multiplier length segment
     public Transform prefab;  // prefab, in future array od prefabs
-    
+
 
     public GameObject Create(long pos, float dificulty)
     {
@@ -20,7 +20,7 @@ public class Segment {
         Transform createdSegment = EZ_Pooling.EZ_PoolManager.Spawn(prefab, new Vector3(0.0f, -1.0f, pos), Quaternion.identity);
         // add segment destructor component to clearing map behind player
         //createdSegment.gameObject.AddComponent<SegmentDestructor>();
-        
+
         // random inverse segment
         if (Random.value > 0.5f)
         {

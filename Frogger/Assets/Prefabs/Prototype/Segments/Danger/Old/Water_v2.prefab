@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 65251030084023324}
   m_Layer: 0
   m_Name: DarkWater
-  m_TagString: River
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 65888165374801144}
   m_Layer: 0
   m_Name: DarkWater
-  m_TagString: River
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
