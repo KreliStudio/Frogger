@@ -15,6 +15,10 @@ public abstract class SegmentController : MonoBehaviour {
     public abstract void Spawn();
     public abstract void Despawn();
 
+    void Awake()
+    {
+        Init();
+    }
 
 
 

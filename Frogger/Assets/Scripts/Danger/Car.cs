@@ -11,16 +11,17 @@ public class Car : MonoBehaviour {
 
     // when player jump on vehicle
     public GameObject stickedPlayer;
+    
 
-    public void Init(float speed,Vector3 sPos, Vector3 ePos)
+    public void Spawn(float speed, Vector3 sPos, Vector3 ePos, float lTime)
     {
         carSpeed = speed;
         startPos = sPos;
         endPos = ePos;
-        lerpTime = 0;
+        lerpTime = lTime;
         transform.rotation = transform.parent.rotation;
     }
-
+    
     public void Update()
     {
         Move();

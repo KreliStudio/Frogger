@@ -8,12 +8,7 @@ public class TrackController2 : SegmentController
     private float timeToArrive;
 
 
-    void Awake()
-    {
-        // Init object in EZ pool
-        Init();
-    }
-
+    
 
     public override void Init()
     {

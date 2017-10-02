@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class RoadController2 : SegmentController
 {
-    
-  
+
+
     public override void Init()
     {
         int id = 0;
@@ -39,16 +39,18 @@ public class RoadController2 : SegmentController
     {
         // random car speed
         speed = Random.Range(0.1f, 0.3f);
-        foreach(Transform trans in instancePrefabsList)
-        {
-            instancePrefabsList[0].gameObject.GetComponent<Car>().Spawn();
+        for(int i=0; i < instancePrefabsList.Length; i++) { 
+            instancePrefabsList[i].gameObject.GetComponent<Car>().Spawn(speed, startPivot.position, endPivot.position, 1.0f/(i+1.0f));
         }
-
+        
     }
+
+
     public override void Despawn()
     {
-
+        EZ_Pooling.EZ_PoolManager.Despawn(transform);
     }
+}
     
 
     
@@ -58,4 +60,4 @@ public class RoadController2 : SegmentController
 
     
 
-}
+
