@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4764407577338566}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,7 +34,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4900079260571072}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: EndPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,7 +49,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4462851179185722}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: StreamIn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ GameObject:
   - component: {fileID: 33409823808915172}
   - component: {fileID: 23000234934384748}
   - component: {fileID: 65293892168316142}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Water
   m_TagString: Water
   m_Icon: {fileID: 0}
@@ -84,10 +84,9 @@ GameObject:
   - component: {fileID: 4132672446256918}
   - component: {fileID: 33296546234788244}
   - component: {fileID: 23886317712168078}
-  - component: {fileID: 65251030084023324}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: DarkWaterIn
-  m_TagString: RiverIn
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,7 +102,7 @@ GameObject:
   - component: {fileID: 33832460196843402}
   - component: {fileID: 23345272109433996}
   - component: {fileID: 65811975499578418}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Water
   m_TagString: Water
   m_Icon: {fileID: 0}
@@ -121,7 +120,7 @@ GameObject:
   - component: {fileID: 33006187573001118}
   - component: {fileID: 23103675875806800}
   - component: {fileID: 65940830400622718}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Water
   m_TagString: Water
   m_Icon: {fileID: 0}
@@ -139,7 +138,7 @@ GameObject:
   - component: {fileID: 33563214978902314}
   - component: {fileID: 23339143201127724}
   - component: {fileID: 65930290753307514}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Water
   m_TagString: Water
   m_Icon: {fileID: 0}
@@ -157,7 +156,7 @@ GameObject:
   - component: {fileID: 33625599007855124}
   - component: {fileID: 23372586949165586}
   - component: {fileID: 65496101751186958}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Water
   m_TagString: Water
   m_Icon: {fileID: 0}
@@ -176,7 +175,7 @@ GameObject:
   - component: {fileID: 23652222451634664}
   - component: {fileID: 65237776081323240}
   - component: {fileID: 114073540287151946}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: WaterCenter
   m_TagString: Water
   m_Icon: {fileID: 0}
@@ -194,7 +193,7 @@ GameObject:
   - component: {fileID: 33312795640234858}
   - component: {fileID: 23734149763182862}
   - component: {fileID: 65502563893419630}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Water
   m_TagString: Water
   m_Icon: {fileID: 0}
@@ -209,7 +208,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4557059446842018}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: StreamOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,7 +226,7 @@ GameObject:
   - component: {fileID: 33130762947731342}
   - component: {fileID: 23178237003460134}
   - component: {fileID: 65740600717658940}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Water
   m_TagString: Water
   m_Icon: {fileID: 0}
@@ -245,7 +244,7 @@ GameObject:
   - component: {fileID: 33768481820205896}
   - component: {fileID: 23043166171228696}
   - component: {fileID: 65888165374801144}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: DarkWaterOut
   m_TagString: RiverOut
   m_Icon: {fileID: 0}
@@ -260,7 +259,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4303931236391304}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: StartPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,7 +277,7 @@ GameObject:
   - component: {fileID: 33759943017562274}
   - component: {fileID: 23091165509517472}
   - component: {fileID: 65722954446100114}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Water
   m_TagString: Water
   m_Icon: {fileID: 0}
@@ -296,7 +295,7 @@ GameObject:
   - component: {fileID: 33052656475382750}
   - component: {fileID: 23472098653289280}
   - component: {fileID: 65120297621073024}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Water
   m_TagString: Water
   m_Icon: {fileID: 0}
@@ -314,7 +313,7 @@ GameObject:
   - component: {fileID: 33565074484829032}
   - component: {fileID: 23245921581899826}
   - component: {fileID: 65865710300952060}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Water
   m_TagString: Water
   m_Icon: {fileID: 0}
@@ -330,7 +329,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4384925436885980}
   - component: {fileID: 114634333505743322}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Water_v3
   m_TagString: WaterSegment
   m_Icon: {fileID: 0}
@@ -1133,18 +1132,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &65251030084023324
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1209722238593720}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.1, y: 3, z: 1}
-  m_Center: {x: 0.45, y: 1, z: 0}
 --- !u!65 &65293892168316142
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1236,7 +1223,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1779503069094788}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.1, y: 3, z: 1}

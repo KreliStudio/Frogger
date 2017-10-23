@@ -14,10 +14,12 @@ public class SafezoneController : SegmentController
         int startPos = (int)startPivot.position.x - offset;
         int endPos = (int)endPivot.position.x + offset;
 
+
         for (int i = startPos; i <= endPos; i++)
         {
-            float randValue = Random.Range(0.0f, 1-(Mathf.Abs(i) + 0.1f) * rate);
-            if (randValue < 0.1f)
+            float randValue = 1.0f/((Mathf.Abs(i) * rate)+1.0f);
+
+          if (Random.value > randValue)
             {
                 id = Random.Range(0, prefabs.Length); // random prefab to spawn
                 instancePrefabsList.Add(Instantiate(prefabs[id], new Vector3(i, transform.position.y + 1, transform.position.z), Quaternion.identity) as Transform);
@@ -25,6 +27,8 @@ public class SafezoneController : SegmentController
             }
 
         }
+
+
 
 
 

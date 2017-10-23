@@ -40,6 +40,10 @@ namespace Player
                     JumpOnVehicle(col.transform, Vector3.zero);
                 }
             }
+            if (col.transform.tag == "RiverOut")
+            {
+                RiverStream();
+            }
         }
 
 
@@ -224,6 +228,13 @@ namespace Player
             //Debug.Log("[Behaviour] Player Drown.");
             // after this behaviour do end game
             Dead();
+        }
+
+        public void RiverStream()
+        {
+            transform.parent.parent.SendMessage("StickPlayer", gameObject);
+            Dead();
+
         }
 
         private void Idle()

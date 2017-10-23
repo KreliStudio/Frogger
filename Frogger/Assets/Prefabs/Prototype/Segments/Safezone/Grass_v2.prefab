@@ -1167,7 +1167,7 @@ MonoBehaviour:
   - {fileID: 4329829624505684, guid: 263c7f690cbc1fd4a917a8aa00a390f5, type: 2}
   instancePrefabsList: []
   offset: 8
-  rate: 0
+  rate: 0.01
 --- !u!114 &114596694509053542
 MonoBehaviour:
   m_ObjectHideFlags: 1

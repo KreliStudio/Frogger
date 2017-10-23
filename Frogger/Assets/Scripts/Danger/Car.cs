@@ -41,8 +41,9 @@ public class Car : MonoBehaviour {
 
         if (lerpTime >= 1)
         {
-            if (stickedPlayer != null)
-                Destroy(stickedPlayer);
+            if (stickedPlayer != null){
+                stickedPlayer.transform.GetChild(0).gameObject.SetActive(false); // turn off player model
+            }
             // reset animation
             transform.position = startPos;
             lerpTime = 0;

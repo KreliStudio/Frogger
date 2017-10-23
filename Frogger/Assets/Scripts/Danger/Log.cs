@@ -12,6 +12,9 @@ public class Log : MonoBehaviour {
     private Vector3 streamInPos;
     private Vector3 streamOutPos;
 
+    // when player go out river stream
+    public GameObject stickedPlayer;
+
 
 
     public void Init(float sp, float x, Vector3 strInPos, Vector3 strOutPos)
@@ -38,7 +41,12 @@ public class Log : MonoBehaviour {
     {
         Move();
     }
-    
+
+
+    public void StickPlayer(GameObject player)
+    {
+        stickedPlayer = player;
+    }
 
     public void Move()
     {
@@ -57,6 +65,10 @@ public class Log : MonoBehaviour {
 
         if (lerpTime >= 1)
         {
+            if (stickedPlayer != null)
+            {
+                stickedPlayer.transform.GetChild(0).gameObject.SetActive(false); // turn off player model
+            }
             // reset animation
             transform.position = startPos;
             lerpTime = 0;
