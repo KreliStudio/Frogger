@@ -116,10 +116,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 18706235}
-  - component: {fileID: 18706236}
   - component: {fileID: 18706237}
   - component: {fileID: 18706239}
   - component: {fileID: 18706238}
+  - component: {fileID: 18706234}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -127,6 +127,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!135 &18706234
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 18706233}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &18706235
 Transform:
   m_ObjectHideFlags: 0
@@ -141,18 +153,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &18706236
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 18706233}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.75, y: 0.75, z: 0.75}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &18706237
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 491220611}
   isBusy: 0
-  speed: 3.5
+  speed: 2
 --- !u!114 &18706239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -938,7 +938,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 18706235}
-  offset: {x: 4.5, y: 10, z: -11}
+  offsetPosition: {x: 4.5, y: 10, z: -11}
+  AxisLimitX: 3
 --- !u!1 &1732725958
 GameObject:
   m_ObjectHideFlags: 0
@@ -1213,18 +1214,18 @@ MonoBehaviour:
   - probability: 1
     intensity: 0.35
     prefab: {fileID: 4295921200926308, guid: 8f56c574e00ecf4478e43b6264104d30, type: 2}
-  - probability: 0.2
+  - probability: 1
     intensity: 0.6
     prefab: {fileID: 4864946186532736, guid: 85414329090995c49a69bab76788c2aa, type: 2}
   dangerSegments:
-  - probability: 0
+  - probability: 1
     intensity: 1
     prefab: {fileID: 4025749503442660, guid: 1d13209e20d73bd498c2d8a1005d94bf, type: 2}
-  - probability: 0
+  - probability: 0.75
     intensity: 0.2
     prefab: {fileID: 4183723072630978, guid: 6af1ad5220951b845bc67b1383ae2ae6, type: 2}
-  - probability: 1
-    intensity: 2
+  - probability: 1.2
+    intensity: 0.75
     prefab: {fileID: 4384925436885980, guid: b55a202ab90fd13418a0e13cf349516f, type: 2}
   safezoneStructuresProbability: 0
   safezoneStructures:

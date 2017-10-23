@@ -233,6 +233,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4295921200926308}
+  - component: {fileID: 114447392042121512}
   m_Layer: 0
   m_Name: Grass_v2
   m_TagString: Untagged
@@ -1148,6 +1149,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.1, y: 2, z: 1}
   m_Center: {x: -0.45, y: 1.5, z: 0}
+--- !u!114 &114447392042121512
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1759453085803468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef482d23281bd24eae412fcf53b88d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPivot: {fileID: 4975069027643796, guid: 85414329090995c49a69bab76788c2aa, type: 2}
+  endPivot: {fileID: 4260250334540550, guid: 85414329090995c49a69bab76788c2aa, type: 2}
+  prefabs:
+  - {fileID: 4469286316885052, guid: 5bf8fb7f64f882044bd598826e0859b3, type: 2}
+  - {fileID: 4329829624505684, guid: 263c7f690cbc1fd4a917a8aa00a390f5, type: 2}
+  instancePrefabsList: []
+  offset: 8
+  rate: 0
 --- !u!114 &114596694509053542
 MonoBehaviour:
   m_ObjectHideFlags: 1
